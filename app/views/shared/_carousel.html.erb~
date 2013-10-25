@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+     <div id="myCarousel" class="carousel slide vertical">
+          <!-- Carousel items-->
+        <div class="carousel-inner">
+           <div class="active item">
+                item 1
+           </div>
+           <div class="item">
+                item 2
+           </div>
+           <div class="item">
+                item 3
+           </div>
+        </div>
+         <!-- Carousel nav -->
+         <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          &lsaquo;</a>
+         <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          &rsaquo;</a>
+     </div>
+  </div>
+</div>

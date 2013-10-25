@@ -1,0 +1,19 @@
+<% @page_title = @user ? @user.name + "'s blog" : "member's blog" %>
+<h1><%= @page_title %></h1>
+<% if @current_user == @user %>
+   <p><% link_to "ブログの作成", "#" %></p>
+<% end %>
+
+<% if @entries.present? %>
+  <% @entries.each do |entry| %>
+    <h2><%= entry.title %></h2>
+    <p><%= truncate(entry.content, length: 80) %>
+        <br />
+       <%= entry.status %>
+    <%= link_to "more", [@user, entry] %></p>
+  <% end %>
+  <%= will_paginate @entries %>
+<% else %>
+    <p>No entries</p>
+
+<% end %>

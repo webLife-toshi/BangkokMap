@@ -1,0 +1,192 @@
+<div id="myCarousel" class="carousel slide homCar">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+		  </ol>
+		  <!-- Carousel items -->
+		<div class="carousel-inner">
+		  
+		  <div class="item active">
+                              <div id="map_canvas" class="span12" style="height:300px;"></div>
+<script type="text/javascript">
+function initialize(){
+     var mapDiv = document.getElementById("map_canvas");
+     var mapCanvas = new google.maps.Map(mapDiv, {
+         center : new google.maps.LatLng(13.72271,100.522053 ),
+         zoom : 14,
+         mapTypeId : google.maps.MapTypeId.ROADMAP
+      });
+
+      var marker = new google.maps.Marker({
+         position : new google.maps.LatLng(13.72271,100.522053),
+         map : mapCanvas
+        });
+      var marker = new google.maps.Marker({
+         position : new google.maps.LatLng(13.72271,100.522053),
+         map : mapCanvas
+        });
+
+      var infoWnd = new google.maps.InfoWindow({
+         position : new google.maps.LatLng(13.72271,100.522053),
+         content : "test"
+      });
+       infoWnd.open(mapCanvas);
+      
+ }
+   google.maps.event.addDomListener(window, "load",initialize);
+</script>
+
+
+			<div class="carousel-caption">
+				  <h4>We work for you </h4>
+				  <p>
+				  No matter how big and how small your business is. We are giving the best solution for your best value of money.
+				  </p>
+			</div>
+		  </div>
+		  <div class="item">
+			<img src="themes/images/carousel/bootstrappage1.png" alt="bootstrappage">
+			<div class="carousel-caption">
+				  <h4>We work for you </h4>
+				  <p>
+				  No matter how big and how small your business is. We are giving the best solution for your best value of money.
+				  </p>
+			</div>
+		  </div>
+		</div>
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>
+    <div id="hero">
+        <div class="container">
+            <!-- starts carousel -->
+            <div class="row animated fadeInDown">
+                <div class="span12">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- carousel items -->
+                        <div class="carousel-inner">
+                            <!-- slide -->
+                            <div class="active item slide1">
+                              
+                                <div class="carousel-caption">
+  <h4>caption</h4>
+  <p>Measure is a beautiful Wrapbootstrap theme for businesses and creative professionals.</p>
+                                </div>
+                            </div>
+                            <!-- slide -->
+                            <div class="item slide2">
+                                <div class="row">
+                                    <div class="span4 animated fadeInUpBig">
+                                        <h1>Fully responsive blog template</h1>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                        <a href="blog.html" class="btn btn-success btn-large">
+                                            Watch it now!
+                                        </a>
+                                    </div>
+                                    <div class="span6 animated fadeInDownBig">
+                                        <img src="img/slide2.png" alt="slide2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide -->
+                            <div class="item slide3 animated fadeInUpBig">
+                                <img src="img/slide3.png" alt="slide3" />
+                            </div>
+                        </div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro">
+        <div class="container">
+            <h1>Measure is a beautiful Wrapbootstrap theme for 
+                businesses and creative professionals.</h1>
+        </div>
+    </div>
+
+    <!-- features -->
+    <div id="features">
+        <div class="container">
+            <!-- header -->
+            <h2 class="section_header">
+                <hr class="left visible-desktop">
+                <span>Features</span>
+                <hr class="right visible-desktop">
+            </h2>
+
+            <!-- feature list -->
+            <div class="row">
+                <div class="span4 feature">
+                    <img src="img/feature1.jpg" alt="feature1" class="thumb" />
+                    <h3>
+                        <i class="i_cloud"></i> Responsive clean theme
+                    </h3>
+                    <p class="description">
+                        There are many variations of passages of Lorem Ipsum available, but the
+                        majority have suffered alteration in some form, by injected humour, or randomised
+                        words which don't look even slightly believable.
+                    </p>
+                    <a href="#" class="btn btn-default">more</a>
+                </div>
+                <div class="span4 feature">
+                    <img src="img/feature2.jpg" alt="feature2" class="thumb" />
+                    <h3>
+                        <i class="i_chart"></i> Responsive clean theme
+                    </h3>
+                    <p class="description">
+                        There are many variations of passages of Lorem Ipsum available, but the
+                        majority have suffered alteration in some form, by injected humour, or randomised
+                        words which don't look even slightly believable.
+                    </p>
+                    <a href="#" class="btn btn-default">more</a>
+                </div>
+                <div class="span4 feature">
+                    <img src="img/feature3.jpg" alt="feature3" class="thumb" />
+                    <h3>
+                        <i class="i_movil"></i> Responsive clean theme
+                    </h3>
+                    <p class="description">
+                        There are many variations of passages of Lorem Ipsum available, but the
+                        majority have suffered alteration in some form, by injected humour, or randomised
+                        words which don't look even slightly believable.
+                    </p>
+                    <a href="#" class="btn btn-default">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- starts testimonial -->
+    <div id="testimonials">
+        <div class="container">
+            <div class="controls">
+                <hr>
+            </div>
+            <div class="phrases_wrapper">
+                <div class="phrase">
+                    <div class="row">
+                        <div class="span7">
+                            <p class="testimony">
+                                There are many variations of passages words which don't look even slightly passage of anything embarrassing hidden in the middle.
+                                <span>"</span>
+                            </p>
+                        </div>
+                        <div class="span3 offset1">
+                            <div class="pic">
+                                <img src="img/pic1.jpg" alt="author" class="img-circle" />
+                                <span class="name">Alejandra Galvan Castillo</span>
+                                <span class="position">Bootstrap wizard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

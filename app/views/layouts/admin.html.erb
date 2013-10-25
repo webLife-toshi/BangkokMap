@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BangkokMap</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</head>
+<body>
+<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  <% end %>
+<div id="user_nav">
+  <% if current_administrator %>
+    Logged in as <%= current_administrator.admin_name %>
+    <%= link_to "Log out", admin_log_out_path %>
+  <% else %>
+    <%= link_to "Log in", admin_log_in_path %>
+  <% end %>
+</div>
+ <div id="nav">
+<%= link_to_unless_current "English", locale: "en" %> |
+<%= link_to_unless_current "Japanese", locale: "ja" %> |
+<%= link_to_unless_current "Korean", locale: "ko" %> |
+</div>
+
+<%= yield %>
+<%= debug(params) if Rails.env.development? %>
+
+</body>
+</html>
+

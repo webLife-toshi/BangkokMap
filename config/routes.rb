@@ -1,13 +1,28 @@
 BangkokMap::Application.routes.draw do
 
+  get "/" => "static_pages#home", :as => :root
+  resources :users do
+     resources :entries
+  end
+
+  get "/blogs" => "blogs#index", :as => :blogs
+  get "/sign_up" => "users#new", :as => :sign_up
+  resources :sessions, only: [:new, :create, :destroy]
+  get "/log_in" => "sessions#new", :as => :log_in
+  get "/log_out" => "sessions#destroy", :as => :log_out
+
+
   namespace :admin do
     resources :administrators
+    resources :sessions, only: [:new, :create, :destroy]
+    get "/log_in" => "sessions#new", :as => :log_in
+    get "/log_out" => "sessions#destroy", :as => :log_out
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+ # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

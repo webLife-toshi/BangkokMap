@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908080710) do
+ActiveRecord::Schema.define(version: 20130919092433) do
 
   create_table "administrators", force: true do |t|
     t.datetime "created_at"
@@ -24,5 +24,32 @@ ActiveRecord::Schema.define(version: 20130908080710) do
   end
 
   add_index "administrators", ["admin_remember_token"], name: "index_administrators_on_admin_remember_token", using: :btree
+
+  create_table "entries", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id",                      null: false
+    t.string   "title",                        null: false
+    t.text     "content"
+    t.string   "status",     default: "draft", null: false
+    t.datetime "posted_at",                    null: false
+  end
+
+  add_index "entries", ["title"], name: "index_entries_on_title", using: :btree
+  add_index "entries", ["user_id"], name: "index_entries_on_user_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.date     "birthday"
+    t.string   "user_remember_token"
+    t.string   "sex"
+  end
+
+  add_index "users", ["user_remember_token"], name: "index_users_on_user_remember_token", using: :btree
 
 end

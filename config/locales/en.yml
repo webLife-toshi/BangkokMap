@@ -21,3 +21,14 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+   attributes:
+    entry:
+      title: "title"
+      content: "content"
+      posted_at: "posted_at"
+      status: "status"
+      status_draft: "draft"
+      status_user_only: "user only"
+      status_public: "public"

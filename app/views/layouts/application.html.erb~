@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BangkokMap</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render "shared/menu" %>
+<div class="container ">
+
+  <div id="myCarousel" class="carousel slide homCar hero-unit">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+ <!-- Carousel items -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="themes/images/carousel/bootstrappage.png" alt="bootstrappage">
+        <div class="carousel-caption">
+          <h4>We work for you </h4>
+          <p>No matter how big and how small your business is. We are giving the best solution for your best value of money.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="themes/images/carousel/bootstrappage1.png" alt="bootstrappage">
+         <div class="carousel-caption">
+           <h4>We work for you </h4>
+           <p> No matter how big and how small your business is. We are giving the best solution for your best value of money. </p>
+         </div>
+      </div>
+    </div>
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>
+
+<div class="row" style="text-align:center">
+  <div class="span2">
+    <div class="well well-small">
+      <h4>Design</h4>
+      <a href="details.html"><small>view details</small></a>
+    </div>
+  </div>
+  <div class="span2">
+   <div class="well well-small">
+     <h4>Development</h4>
+     <a href="details.html"><small>view details</small></a>
+   </div>
+  </div>
+
+			<div class="span2">
+
+				<div class="well well-small">
+
+					<h4>Optimize</h4>
+
+					<a href="details.html"><small>view details</small></a>
+
+				</div>
+
+			</div>
+
+			<div class="span2">
+
+				<div class="well well-small">
+
+					<h4>Customize</h4>
+
+					<a href="details.html"><small>view details</small></a>
+
+				</div>
+
+			</div>
+
+			<div class="span2">
+
+				<div class="well well-small">
+
+					<h4>SEO</h4>
+
+					<a href="details.html"><small>view details</small></a>
+
+				</div>
+
+			</div>
+
+			<div class="span2">
+
+				<div class="well well-small">
+
+					<h4>Open-sourse</h4>
+
+					<a href="details.html"><small>view details</small></a>
+
+				</div>
+
+			</div>
+
+			
+
+</div>
+
+</div>
+
+</div>
+
+<div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="row">
+       <div class="span12">
+<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  <% end %>
+
+
+<br />
+<%= yield %>
+<%= debug(params) if Rails.env.development? %>
+      </div>
+     </div>
+</div>
+</body>
+</html>

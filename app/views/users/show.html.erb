@@ -1,0 +1,7 @@
+<h1>User Show</h1>
+<%= @user.name %><br />
+<%= @user.email %><br />
+<%= @user.birthday %><br />
+<%= @user.sex %>
+<h2><%= link_to @user.name + "'s blogs", user_entries_path(current_user) %></h2>
+

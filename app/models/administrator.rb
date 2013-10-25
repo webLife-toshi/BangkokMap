@@ -1,5 +1,5 @@
 class Administrator < ActiveRecord::Base
-  attr_accessible :admin_email, :admin_name, :password, :password_confirmation
+  #attr_accessible :admin_email, :admin_name, :password, :password_confirmation
   before_save :admin_encrypt_password
 
   attr_accessor :password

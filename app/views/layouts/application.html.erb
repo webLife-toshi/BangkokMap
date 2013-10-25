@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render "shared/header" %>
+<br />
+<% flash.each do |name, msg| %>
+    <p><%= content_tag :div, msg, :id => "flash#{name}" %></p>
+  <% end %>
+<br />
 <%= yield %>
+<%= debug(params) if Rails.env.development? %>
+ 
 
 </body>
 </html>

@@ -1,0 +1,47 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+          	</a>
+       <a class="brand" href="#"></a>
+      <div class="nav-collapse collapse">
+
+      <ul class="nav">
+        <li class="active"><%= link_to "Bangkok Map", root_path, :class=>"brand scroller" %></li>
+        <li><%= link_to "Blogs", blogs_path %></li>
+        <li><%= link_to "Members", "#" %></li>
+        <li><%= link_to "Map", "#" %></li>
+      </ul><!-- .nav finish-->
+<ul class="nav">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+     <li><a href="#">Web Design</a></li>
+  <li><a href="#">Web development</a></li>
+  <li><a href="#">Wordpress Theme development</a></li>
+    </ul>
+  </li>
+</ul>
+<ul class="nav pull-right">
+  <li>
+<% if current_user%>
+ <%= link_to "Log out", log_out_path, :class=>"btn-header" %>
+<% else %>
+ <%= link_to "Log in", log_in_path, :class=>"btn-header" %>
+<% end %>
+</li>
+  <li>
+<% if current_user %>
+<%= nil %>
+<% else %>
+<%= link_to "Sign Up", sign_up_path, :class=>"btn-header" %>
+<% end %>
+</li>
+</ul>
+     </div>
+    </div><!-- .container finish -->
+  </div><!-- .navbar-inner finish -->
+</div><!-- .navbar navbar-fixed-top finish -->
